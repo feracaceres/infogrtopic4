@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Globalización Comercial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#005f73]">Globalización Comercial</h1>
+            <p class="text-lg text-[#0a9396] mt-2">Una guía visual para estudiantes de ADE</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#005f73] mb-4">📈 El Pulso del Comercio Global</h2>
+                <p class="mb-4">Durante los últimos 70 años, la economía mundial ha seguido una regla de oro: el comercio ha crecido mucho más rápido que la producción total (PIB). La principal razón es la <span class="font-bold text-[#0a9396]">liberalización comercial</span>, es decir, la eliminación progresiva de barreras como los aranceles.</p>
+                <div class="chart-container mx-auto h-64 md:h-80">
+                    <canvas id="tradeVsGdpChart"></canvas>
+                </div>
+                <p class="text-sm text-center mt-2 text-gray-500">Visualización del crecimiento superior del comercio frente al PIB mundial.</p>
+            </div>
+
+            <div class="lg:col-span-1 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#005f73] mb-4">⚖️ El Árbitro: La OMC</h2>
+                <p class="mb-4">La Organización Mundial del Comercio (OMC) establece las reglas del juego para asegurar un comercio fluido, predecible y justo.</p>
+                <ul class="space-y-3 text-left">
+                    <li class="flex items-start"><span class="text-2xl mr-3">✍️</span> <div><span class="font-bold">Administrar Acuerdos:</span> Supervisa los pactos comerciales firmados por sus más de 160 países miembros.</div></li>
+                    <li class="flex items-start"><span class="text-2xl mr-3">🤝</span> <div><span class="font-bold">Foro de Negociación:</span> Reúne a los países para negociar la reducción de barreras.</div></li>
+                    <li class="flex items-start"><span class="text-2xl mr-3">👨‍⚖️</span> <div><span class="font-bold">Resolver Disputas:</span> Actúa como un tribunal para solucionar conflictos comerciales de forma pacífica.</div></li>
+                </ul>
+            </div>
+
+            <div class="lg:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#005f73] mb-4">🌍 Uniendo Fuerzas: Integración Económica</h2>
+                <p class="mb-4">A veces, los países forman "clubes" para acelerar el comercio entre ellos. Esto se conoce como integración económica, y tiene diferentes niveles de compromiso.</p>
+                <div class="w-full">
+                    <div class="relative wrap overflow-hidden p-4 h-full">
+                        <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
+                        <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                            <div class="order-1 w-5/12"></div>
+                            <div class="z-20 flex items-center order-1 bg-[#94d2bd] shadow-xl w-12 h-12 rounded-full justify-center text-white font-bold">1</div>
+                            <div class="order-1 bg-[#e9d8a6] rounded-lg shadow-xl w-5/12 px-6 py-4">
+                                <h3 class="font-bold text-[#005f73] text-lg">Área de Libre Comercio</h3>
+                                <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Sin aranceles internos. Cada país mantiene su propio arancel externo. (Ej: antiguo NAFTA)</p>
+                            </div>
+                        </div>
+                        <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                            <div class="order-1 w-5/12"></div>
+                             <div class="z-20 flex items-center order-1 bg-[#ee9b00] shadow-xl w-12 h-12 rounded-full justify-center text-white font-bold">2</div>
+                            <div class="order-1 bg-[#e9d8a6] rounded-lg shadow-xl w-5/12 px-6 py-4">
+                                <h3 class="font-bold text-[#005f73] text-lg">Unión Aduanera</h3>
+                                <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Sin aranceles internos y un Arancel Externo Común. (Ej: MERCOSUR)</p>
+                            </div>
+                        </div>
+                         <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                            <div class="order-1 w-5/12"></div>
+                            <div class="z-20 flex items-center order-1 bg-[#ca6702] shadow-xl w-12 h-12 rounded-full justify-center text-white font-bold">3</div>
+                            <div class="order-1 bg-[#e9d8a6] rounded-lg shadow-xl w-5/12 px-6 py-4">
+                                <h3 class="font-bold text-[#005f73] text-lg">Mercado Común</h3>
+                                <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Lo anterior, más libre movimiento de personas, capital y servicios. (Ej: inicios de la UE)</p>
+                            </div>
+                        </div>
+                        <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                             <div class="order-1 w-5/12"></div>
+                             <div class="z-20 flex items-center order-1 bg-[#bb3e03] shadow-xl w-12 h-12 rounded-full justify-center text-white font-bold">4</div>
+                             <div class="order-1 bg-[#e9d8a6] rounded-lg shadow-xl w-5/12 px-6 py-4">
+                                 <h3 class="font-bold text-[#005f73] text-lg">Unión Económica</h3>
+                                 <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Coordinación profunda de políticas macroeconómicas (fiscal, monetaria, etc.).</p>
+                             </div>
+                         </div>
+                         <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                            <div class="order-1 w-5/12"></div>
+                            <div class="z-20 flex items-center order-1 bg-[#ae2012] shadow-xl w-12 h-12 rounded-full justify-center text-white font-bold">5</div>
+                            <div class="order-1 bg-[#e9d8a6] rounded-lg shadow-xl w-5/12 px-6 py-4">
+                                <h3 class="font-bold text-[#005f73] text-lg">Unión Política</h3>
+                                <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Políticas comunes para todos los miembros, un proceso gradual. (Ej: Política Agraria Común en la UE)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#005f73] mb-4">⚠️ Conceptos Clave a Dominar</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                        <h3 class="font-bold text-lg text-blue-800 mb-2">Cooperación vs. Integración</h3>
+                        <p><span class="font-bold">Cooperación:</span> Acuerdo limitado sin ceder soberanía (ej: un tratado pesquero).</p>
+                        <p><span class="font-bold">Integración:</span> Compromiso profundo donde los países ceden soberanía para crear reglas y mercados comunes.</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                         <h3 class="font-bold text-lg text-green-800 mb-2">Creación vs. Desviación de Comercio</h3>
+                        <p><span class="font-bold text-green-600">Creación (👍):</span> Se pasa a comprar a un socio del club más eficiente que el productor nacional.</p>
+                        <p><span class="font-bold text-red-600">Desviación (👎):</span> Se cambia un proveedor externo eficiente por un socio del club menos eficiente, solo para evitar el arancel.</p>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="md:col-span-2 lg:col-span-3 text-center bg-white rounded-lg shadow-md p-6">
+                 <h2 class="text-2xl font-bold text-[#005f73] mb-2">✅ En Resumen</h2>
+                 <p class="max-w-3xl mx-auto">Piensa en el comercio global con esta doble visión: la <span class="font-bold">OMC</span> pone las reglas generales para todos, mientras que la <span class="font-bold">integración económica</span> crea "ligas regionales" con reglas aún más profundas. Ambas fuerzas han diseñado el mapa económico que conoces hoy.</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const tradeVsGdpCtx = document.getElementById('tradeVsGdpChart').getContext('2d');
+        const tradeVsGdpChart = new Chart(tradeVsGdpCtx, {
+            type: 'line',
+            data: {
+                labels: ['1980s', '1990s', '2000s', '2010s', '2020s'],
+                datasets: [{
+                    label: 'Crecimiento del Comercio Mundial (%)',
+                    data: [3.5, 6.8, 5.5, 3.2, 2.8],
+                    borderColor: '#0a9396',
+                    backgroundColor: 'rgba(10, 147, 150, 0.2)',
+                    tension: 0.4,
+                    fill: true,
+                }, {
+                    label: 'Crecimiento del PIB Mundial (%)',
+                    data: [3.1, 3.2, 3.8, 2.8, 2.5],
+                    borderColor: '#ee9b00',
+                    backgroundColor: 'rgba(238, 155, 0, 0.2)',
+                    tension: 0.4,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Tasa de Crecimiento Anual Promedio'
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
